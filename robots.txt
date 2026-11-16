@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://github.com/apporasoftware/apporasoftware.github.io/sitemap.xml
+Sitemap: https://apporasoftware.github.io/sitemap.xml
