@@ -1,172 +1,724 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="google-site-verification" content="PgGOg4RWPH0kiT1RGmIXbCGh1lB6I_83J6gtxWgzRMo">
-    <title>Appora Typing Master | Appora Software</title>
-    <meta name="description" content="Download Appora Typing Master, a secure and useful typing practice application for Windows PC.">
-    <meta name="keywords" content="Appora Typing Master, free software, typing master software, typing practice app, improve typing speed">
+
+    <title>Appora Software | Professional Desktop Applications</title>
+
+    <meta name="description" content="Discover Appora Typing Master, a professional Windows typing practice application. Download and improve your typing speed and accuracy.">
+
+    <meta name="keywords" content="Appora Software, Appora Typing Master, Typing Master Download, Typing Practice Software, Windows Software">
+
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://apporasoftware.github.io">
+
+    <link rel="canonical" href="https://apporasoftware.github.io/">
 
     <style>
         :root {
-            --primary: #174d35;
-            --accent: #087c50;
-            --bg-body: #f5f7f6;
-            --bg-card: #ffffff;
-            --text-dark: #26352c;
-            --text-muted: #5a6b62;
-            --border-color: #dce5e0;
+            --primary: #123d2c;
+            --secondary: #087c50;
+            --accent: #16a36b;
+            --light: #f2f8f4;
+            --white: #ffffff;
+            --dark: #20372c;
+            --muted: #64756b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--bg-body);
-            color: var(--text-dark);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            background: var(--primary);
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-            letter-spacing: 0.5px;
-        }
-
-        header p {
-            margin-top: 8px;
-            color: #d8ebe2;
-            font-size: 15px;
-        }
-
-        main {
-            max-width: 900px;
-            width: 100%;
-            margin: 30px auto;
-            padding: 0 20px;
-            flex: 1;
-        }
-
-        .card {
-            background: var(--bg-card);
-            padding: 30px;
-            margin: 20px 0;
-            border-radius: 14px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        }
-
-        .card h2 {
-            color: var(--primary);
-            font-size: 22px;
-            margin-bottom: 12px;
-        }
-
-        .card p {
-            color: var(--text-muted);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f8f6;
+            color: var(--dark);
             line-height: 1.7;
-            font-size: 15px;
-            margin-bottom: 20px;
         }
 
-        .urdu-text {
-            text-align: right;
-            font-family: 'Jameel Noori Nastaleeq', Tahoma, Arial, sans-serif;
-            font-size: 18px;
-            line-height: 1.8;
-            background: #f9fbfa;
-            padding: 18px;
-            border-radius: 10px;
-            border: 1px dashed #b8cfc4;
-            color: var(--text-dark);
-            margin: 15px 0;
+        /* Navigation */
+
+        nav {
+            background: var(--primary);
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #4bd69a;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-links a {
+            color: #e4f3e9;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 9px 15px;
+            border-radius: 7px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #ffffff20;
+            color: white;
+        }
+
+        .nav-links .download-nav {
+            background: var(--accent);
+            color: white;
+        }
+
+        .nav-links .download-nav:hover {
+            background: #0b8757;
+        }
+
+        /* Hero */
+
+        .hero {
+            background: linear-gradient(125deg, #123d2c, #087c50);
+            color: white;
+            padding: 100px 20px 110px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: #ffffff18;
+            border: 1px solid #ffffff40;
+            padding: 7px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            margin-bottom: 25px;
+            color: #c8f5dd;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.25;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: #63e3a7;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: #e0f0e6;
+            max-width: 650px;
+            margin: 0 auto 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .btn {
             display: inline-block;
-            background: var(--accent);
-            color: white;
-            text-decoration: none;
-            padding: 12px 25px;
+            padding: 13px 27px;
             border-radius: 8px;
-            font-weight: bold;
+            text-decoration: none;
+            font-weight: 700;
             font-size: 15px;
-            transition: 0.2s;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #ffffff;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: #d9f7e7;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 1px solid #ffffffa0;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: #ffffff20;
+            transform: translateY(-3px);
+        }
+
+        /* Main Sections */
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 22px;
+        }
+
+        section {
+            scroll-margin-top: 85px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-heading h2 {
+            color: var(--primary);
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* About */
+
+        .about {
+            padding: 75px 0 35px;
+        }
+
+        .about-card {
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            border: 1px solid #e1ebe4;
+            box-shadow: 0 7px 25px rgba(0,0,0,0.035);
             text-align: center;
         }
 
-        .btn:hover {
-            background: #066540;
+        .about-card h3 {
+            color: var(--primary);
+            font-size: 23px;
+            margin-bottom: 14px;
         }
+
+        .about-card p {
+            color: var(--muted);
+            max-width: 780px;
+            margin: auto;
+            font-size: 15px;
+        }
+
+        .urdu-text {
+            direction: rtl;
+            text-align: center;
+            font-family: 'Jameel Noori Nastaleeq', Tahoma, Arial, sans-serif;
+            font-size: 19px;
+            line-height: 2;
+            background: #f1f8f3;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 25px;
+            color: var(--primary);
+        }
+
+        /* Software */
+
+        .software {
+            padding: 65px 0 80px;
+        }
+
+        .software-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.06);
+            border: 1px solid #e1ebe4;
+        }
+
+        .software-visual {
+            background: linear-gradient(145deg, #123d2c, #159463);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 45px 20px;
+            min-height: 300px;
+        }
+
+        .software-icon {
+            width: 145px;
+            height: 145px;
+            border: 3px solid #ffffff80;
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 57px;
+            font-weight: 800;
+            box-shadow: 0 10px 35px #0003;
+        }
+
+        .software-info {
+            padding: 42px 35px;
+        }
+
+        .software-info h3 {
+            font-size: 27px;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .software-info p {
+            color: var(--muted);
+            margin-bottom: 22px;
+            font-size: 15px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .feature {
+            color: #315b43;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .feature span {
+            color: var(--accent);
+            margin-right: 7px;
+        }
+
+        .download-btn {
+            background: var(--secondary);
+            color: white;
+            padding: 13px 25px;
+            display: inline-block;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #075d3d;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px #087c5030;
+        }
+
+        /* Why Appora */
+
+        .benefits {
+            padding: 65px 0;
+            background: #edf5ef;
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 28px 22px;
+            text-align: center;
+            border-radius: 13px;
+            border: 1px solid #e0eae2;
+        }
+
+        .benefit-card .symbol {
+            font-size: 30px;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .benefit-card h3 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .benefit-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* Footer */
 
         footer {
+            background: #103626;
+            color: #d5e9dc;
+            padding: 35px 20px;
             text-align: center;
-            background: var(--primary);
-            color: #d8ebe2;
-            padding: 20px;
-            font-size: 14px;
-            margin-top: 40px;
         }
+
+        footer h3 {
+            color: white;
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        /* Mobile */
+
+        @media(max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 10px;
+            }
+
+            .nav-links {
+                gap: 3px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                padding: 7px 9px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 75px 20px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .software-card {
+                grid-template-columns: 1fr;
+            }
+
+            .software-info {
+                padding: 30px 23px;
+            }
+
+            .benefit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading h2 {
+                font-size: 25px;
+            }
+        }
+
+        @media(max-width: 400px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+        }
+
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Appora Software</h1>
-    <p>Professional Windows Desktop Applications</p>
+<!-- Navigation -->
+
+<nav>
+
+    <div class="logo">
+        APPORA<span>.</span>
+    </div>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#software">Our Software</a>
+        <a href="#benefits">Why Appora</a>
+        <a href="#software" class="download-nav">Download</a>
+    </div>
+
+</nav>
+
+
+<!-- Hero Section -->
+
+<header class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+            WELCOME TO APPORA SOFTWARE
+        </div>
+
+        <h1>
+            Smart Software for a
+            <span>Better Experience</span>
+        </h1>
+
+        <p>
+            Discover practical and user-friendly Windows applications
+            designed to make your everyday digital experience easier,
+            smarter and more productive.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#software" class="btn btn-primary">
+                Explore Our Software
+            </a>
+
+            <a href="#about" class="btn btn-outline">
+                About Appora
+            </a>
+
+        </div>
+
+    </div>
+
 </header>
+
 
 <main>
 
-    <!-- About Section -->
-    <section class="card">
-        <h2>About Appora Software</h2>
-        <p>
-            Appora Software develops practical, secure, and user-friendly desktop applications designed to boost everyday productivity.
-        </p>
+    <!-- About -->
 
-        <div class="urdu-text" dir="rtl">
-            <strong>اپورا سافٹ ویئر:</strong><br>
-            اپورا سافٹ ویئر کا مقصد صارفین کے لیے مفید، آسان اور قابل اعتماد ڈیسک ٹاپ ایپلی کیشنز تیار کرنا ہے۔
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>About Appora Software</h2>
+                <p>Technology designed with simplicity and purpose.</p>
+            </div>
+
+            <div class="about-card">
+
+                <h3>Who We Are</h3>
+
+                <p>
+                    Appora Software is dedicated to developing
+                    practical, reliable and user-friendly desktop
+                    applications. Our goal is to provide useful
+                    software solutions that help people improve
+                    productivity and make everyday tasks easier.
+                </p>
+
+                <div class="urdu-text">
+
+                    <strong>اپورا سافٹ ویئر</strong>
+
+                    <p>
+                        ہمارا مقصد صارفین کے لیے مفید، آسان اور
+                        قابل اعتماد سافٹ ویئر تیار کرنا ہے،
+                        جو روزمرہ کے کاموں کو بہتر اور آسان بنائے۔
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
+
     </section>
 
-    <!-- Main Product: Typing Master -->
-    <section class="card">
-        <h2>Appora Typing Master</h2>
-        <p>
-            Appora Typing Master is a dedicated typing practice suite built to help users improve keyboard speed, accuracy, and finger placement with structured modules and practice exercises.
-        </p>
-        <a href="https://github.com/apporasoftware/apporasoftware.github.io/releases" target="_blank" class="btn">
-            Download Appora Typing Master
-        </a>
+
+    <!-- Software -->
+
+    <section class="software" id="software">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Our Software</h2>
+
+                <p>
+                    Explore our featured Windows application.
+                </p>
+
+            </div>
+
+            <div class="software-card">
+
+                <div class="software-visual">
+
+                    <div class="software-icon">
+                        AT
+                    </div>
+
+                </div>
+
+                <div class="software-info">
+
+                    <h3>Appora Typing Master</h3>
+
+                    <p>
+                        Improve your typing speed, accuracy and
+                        keyboard skills with Appora Typing Master.
+                        A dedicated Windows application designed
+                        for effective typing practice and learning.
+                    </p>
+
+                    <div class="features">
+
+                        <div class="feature">
+                            <span>✓</span> Typing Practice
+                        </div>
+
+                        <div class="feature">
+                            <span>✓</span> Speed Improvement
+                        </div>
+
+                        <div class="feature">
+                            <span>✓</span> Accuracy Training
+                        </div>
+
+                        <div class="feature">
+                            <span>✓</span> Windows Application
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="https://github.com/apporasoftware/ApporaTypingMaster/releases/tag/1.0.0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="download-btn">
+
+                        Download Software ↓
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
-    <!-- Updates Info (No external developer links) -->
-    <section class="card">
-        <h2>Software Updates & Support</h2>
-        <p style="margin-bottom: 0;">
-            We regularly release performance improvements and new features for our applications. Check back on this official portal for the latest versions.
-        </p>
+
+    <!-- Benefits -->
+
+    <section class="benefits" id="benefits">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Why Choose Appora?</h2>
+
+                <p>
+                    Our focus is on useful software and a simple experience.
+                </p>
+
+            </div>
+
+            <div class="benefit-grid">
+
+                <div class="benefit-card">
+
+                    <div class="symbol">✦</div>
+
+                    <h3>Easy to Use</h3>
+
+                    <p>
+                        Simple and user-friendly software
+                        designed for everyday users.
+                    </p>
+
+                </div>
+
+                <div class="benefit-card">
+
+                    <div class="symbol">◆</div>
+
+                    <h3>Practical Solutions</h3>
+
+                    <p>
+                        Applications focused on real-world
+                        needs and productivity.
+                    </p>
+
+                </div>
+
+                <div class="benefit-card">
+
+                    <div class="symbol">⬡</div>
+
+                    <h3>Continuous Improvement</h3>
+
+                    <p>
+                        We aim to improve our applications
+                        through updates and enhancements.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
 </main>
 
+
+<!-- Footer -->
+
 <footer>
-    <p>© 2026 Appora Software. All Rights Reserved.</p>
+
+    <h3>APPORA SOFTWARE</h3>
+
+    <p>
+        Smart Software. Simple Experience.
+    </p>
+
+    <p>
+        © 2026 Appora Software. All Rights Reserved.
+    </p>
+
 </footer>
 
 </body>
