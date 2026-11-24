@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="google-site-verification" content="PgGOg4RWPH0kiT1RGmIXbCGh1lB6I_83J6gtxWgzRMo">
-<link rel="icon" type="image/jpg" href="/logo.jpg">
-<link rel="shortcut icon" type="image/jpg" href="/logo.jpg">
-<link rel="apple-touch-icon" href="/logo.jpg">
+
+    <!-- Only ONE Title Tag -->
     <title>Appora Typing Master | Free Typing Tutor & Windows Software</title>
-     <title>Typing Master | Free Typing Tutor For Windows Software</title>
-   <title>Typing Master Free Download| Free Typing Tutor download</title>
+
     <meta name="description" content="Download Appora Typing Master — a free Windows typing tutor and practice software designed to improve your touch typing speed (WPM) and keyboard accuracy.">
 
     <meta name="keywords" content="Appora Software, Appora Typing Master, typing tutor, typing master free download, typing practice software, touch typing tutor, Windows typing app">
@@ -23,6 +21,11 @@
     <meta property="og:description" content="Improve your typing speed and accuracy with Appora Typing Master. Official Windows desktop typing practice software.">
     <meta property="og:url" content="https://apporasoftware.github.io/">
     <meta property="og:type" content="website">
+
+    <!-- Appora Software Favicon (Use exact filename uploaded on GitHub) -->
+    <link rel="icon" type="image/png" sizes="192x192" href="https://apporasoftware.github.io/logo.png">
+    <link rel="shortcut icon" type="image/png" href="https://apporasoftware.github.io/logo.png">
+    <link rel="apple-touch-icon" href="https://apporasoftware.github.io/logo.png">
 
     <!-- Structured Data for Site Name & Software App -->
     <script type="application/ld+json">
@@ -49,12 +52,6 @@
       }
     ]
     </script>
-
-<!-- Appora Software Favicon -->
-<link rel="icon" type="image/png" href="/logo.png">
-<link rel="shortcut icon" type="image/png" href="/logo.png">
-<link rel="apple-touch-icon" href="/logo.png">
-
 
     <style>
         :root {
@@ -97,22 +94,28 @@
             box-shadow: 0 3px 15px rgba(0,0,0,0.12);
         }
 
-        .logo {
-            color: white;
-            font-size: 25px;
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
+       .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-        .logo span {
-            color: #4bd69a;
-        }
+.nav-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: #ffffff;
+    padding: 2px;
+}
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+.logo .dot {
+    color: #4bd69a;
+}
 
         .nav-links a {
             color: #e4f3e9;
@@ -504,10 +507,10 @@
 
 <!-- Navigation -->
 <nav>
-    <div class="logo">
-        APPORA<span>.</span>
-    </div>
-
+   <div class="logo">
+    <img src="https://apporasoftware.github.io/logo.png" alt="Appora Software Logo" class="nav-icon">
+    <span>APPORA</span><span class="dot">.</span>
+</div>
     <div class="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About Us</a>
